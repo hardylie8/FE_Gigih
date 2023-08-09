@@ -5,9 +5,6 @@ export const Base = () => {
     <main>
       <AppNavbar />
       <Outlet />
-
-      {/* <div className="">
-      </div> */}
     </main>
   );
 };
