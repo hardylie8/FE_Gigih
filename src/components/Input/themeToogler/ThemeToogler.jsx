@@ -13,6 +13,7 @@ export const ThemeToogler = () => {
     setIsDarkMode(tooglerValue);
     !tooglerValue ? setTheme("dark") : setTheme("light");
   };
+
   return (
     <div>
       <Switch

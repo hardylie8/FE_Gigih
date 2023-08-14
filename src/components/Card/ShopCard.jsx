@@ -2,14 +2,15 @@ import React from "react";
 import { Card, CardBody, Image, Button } from "@nextui-org/react";
 import { HeartIcon } from "./HeartIcon";
 import { BsCartPlusFill } from "react-icons/bs";
+import { rupiah } from "../../utils/IdrFormatter";
 
-export const ShopCard = () => {
+export const ShopCard = ({ product }) => {
   const [liked, setLiked] = React.useState(false);
 
   return (
     <Card
       isBlurred
-      className="border-none  w-max min-h-[170px] max-w-[35%] min-w-[200px] lg:max-w-fit lg:min-w-full  bg-zinc-50 dark:bg-zinc-900  "
+      className="border-solid bg-zinc-50 dark:bg-zinc-900  w-max min-h-[150px] max-w-[35%] min-w-[200px] lg:max-w-fit lg:min-w-full   "
       shadow="sm"
     >
       <CardBody>
@@ -17,22 +18,21 @@ export const ShopCard = () => {
           <div className="relative col-span-6 lg:col-span-4 grid items-center justify-center">
             <Image
               alt="Album cover"
-              className="object-cover w-max "
+              className="object-cover w-full min-h-[76px]"
               shadow="md"
-              src="https://www.pngmart.com/files/22/iPhone-14-PNG-Transparent.png"
+              src={product.url}
             />
           </div>
 
           <div className="flex flex-col col-span-6 lg:col-span-8">
             <div className="flex justify-between my-2 items-start">
               <div className="flex flex-col gap-0">
-                <h4 className="text-small font-semibold text-foreground/90">
-                  {" "}
-                  Nike Adapt BB 2.0
+                <h4 className="text-medium font-semibold text-foreground/90">
+                  {product.title}
                 </h4>
-                <p className="text-tiny text-foreground/80">The news Nike ..</p>
+                {/* <p className="text-tiny text-foreground/80">The news Nike ..</p> */}
                 <h5 className="text-small font-small mt-2">
-                  Rp. 18.0000.000,-
+                  {rupiah(product.price)}
                 </h5>
               </div>
               <Button
@@ -49,54 +49,13 @@ export const ShopCard = () => {
               </Button>
             </div>
 
-            <div className="flex w-full items-center justify-around gap-1">
+            <div className="flex w-full items-center justify-start gap-1">
               <Button color="primary" size="sm" variant="solid">
                 Buy Now
               </Button>
               <Button isIconOnly color="primary" size="sm" variant="bordered">
                 <BsCartPlusFill />
               </Button>
-              {/* <Button
-                isIconOnly
-                className="data-[hover]:bg-foreground/10"
-                radius="full"
-                color="primary"
-              >
-                <BsCartPlusFill />
-                <RepeatOneIcon className="text-foreground/80" />
-              </Button> */}
-              {/* <Button
-                isIconOnly
-                className="data-[hover]:bg-foreground/10"
-                radius="full"
-                variant="light"
-              >
-                <PreviousIcon />
-              </Button>
-              <Button
-                isIconOnly
-                className="w-auto h-auto data-[hover]:bg-foreground/10"
-                radius="full"
-                variant="light"
-              >
-                <PauseCircleIcon size={54} />
-              </Button>
-              <Button
-                isIconOnly
-                className="data-[hover]:bg-foreground/10"
-                radius="full"
-                variant="light"
-              >
-                <NextIcon />
-              </Button>
-              <Button
-                isIconOnly
-                className="data-[hover]:bg-foreground/10"
-                radius="full"
-                variant="light"
-              >
-                <ShuffleIcon className="text-foreground/80" />
-              </Button> */}
             </div>
           </div>
         </div>
