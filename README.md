@@ -7,7 +7,9 @@ kindly check https://github.com/hardylie8/BE_Gigih for the backend.
 ## Tech Stack
 
 React.js
+
 Next.ui (ui library)
+
 Socket.io
 
 ## Feature
@@ -69,3 +71,7 @@ Compose Docker Container and wait until done
 ```bash
   docker pull rd117/gigih-lab
 ```
+
+## Contact
+
+For any questions or issues, please feel free to reach out to me at [hardyliyanto@gmail.com](mailto:hardyliyanto@gmail.com).
