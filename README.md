@@ -10,6 +10,11 @@ React.js
 Next.ui (ui library)
 Socket.io
 
+## Feature
+
+Authentication
+live comment with websocket
+
 ## Run Locally
 
 Clone the project
