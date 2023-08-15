@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  gigihplay:
+    container_name: "gigihplay"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: on-failure
+    ports:
+      - "4173:4173"
+    # depends_on:
+    #   - gigihplay-svc
