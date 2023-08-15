@@ -1,8 +1,65 @@
-# React + Vite
+# Gigih play
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+For the final project in Generasi Gigih 3.0, the goal is to create an interactive live shopping platform that enables users to engage in live shopping events, explore a variety of products, and actively participate by posting comments during the live sessions. this is the frontend repository.
 
-Currently, two official plugins are available:
+kindly check https://github.com/hardylie8/BE_Gigih for the backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+
+React.js
+Next.ui (ui library)
+Socket.io
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/hardylie8/FE_Gigih.git
+```
+
+Go to the project directory
+
+```bash
+  cd Generasi_gigih_3.0/FE_Gigih
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Copy/rename .env.example to .env.local and fill the value
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+## Run Locally via docker
+
+Clone the project
+
+```bash
+  git clone https://github.com/hardylie8/FE_Gigih.git
+```
+
+Go to the project directory
+
+```bash
+  cd Generasi_gigih_3.0/FE_Gigih
+```
+
+Compose Docker Container and wait until done
+
+```bash
+  docker-compose -f docker-compose.yml up --build -d
+```
+
+## pull the docker image
+
+```bash
+  docker pull rd117/gigih-lab
+```
