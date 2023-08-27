@@ -30,7 +30,7 @@ export default function Router() {
           element: <VideoDetail />,
         },
         {
-          path: "/home",
+          path: "/",
           element: <Home />,
         },
         {},
